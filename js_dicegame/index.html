@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICE GAME</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>DICE GAME</h1>
+        <div class = "players">
+            <div class="player" id="player1">
+                <input type="text" id="player1-name" name="name1" placeholder="player 1">
+                <p >current score:<span id="p1current">0</span></p>
+                <p >saved score:<span id="p1saved">0</span></p>
+            </div>
+            <div class="player" id="player2">
+                <input type="text" id="player2-name" name="name2" placeholder="player 2">
+                <p >current score:<span id="p2current">0</span></p>
+                <p >saved score:<span id="p2saved">0</span></p>
+            </div>
+        </div>
+        <div class="dice-container">
+            <img id ="dice-img" src="images/dice-1.jpeg" alt="dice numbering 1">
+        </div>
+        <div class = "button-container">
+            <button type="button" id = "roll-btn">Roll</button>
+            <button type="button" id = "save-btn">Save</button>
+            <button type="button" id = "reset-btn">Reset</button>
+        </div>
+        <p id = "winner-declaration"></p>
+    </div>
+
+    <script src = "script.js"></script> 
+</body>
+</html>
