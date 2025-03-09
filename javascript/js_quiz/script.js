@@ -46,7 +46,7 @@ function formatQuestion(q, index) {
     };
 }
 
-// Start the quiz
+
 function startQuiz() {
     startScreen.style.display = "none"; 
     questionScreen.style.display = "flex"; 
@@ -78,7 +78,7 @@ function updateUI() {
     answerButtons.forEach(button => button.style.backgroundColor = ""); 
 }
 
-// Start the countdown timer for the question
+
 function startTimer() {
     timer = setInterval(() => {
         timeLeft--; 
@@ -90,7 +90,7 @@ function startTimer() {
     }, 1000); 
 }
 
-// Handle answer selection
+
 function selectAnswer(button, correctAnswer) {
     clearInterval(timer); 
     const selectedAnswer = button.innerText; 
@@ -114,7 +114,7 @@ function revealAnswer() {
     nextButton.style.display = "block"; 
 }
 
-// Move to the next question or show results
+
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++; 
     if (currentQuestionIndex < questions.length) {
@@ -124,18 +124,18 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-// Show the final quiz results
+
 function showResults() {
     questionScreen.style.display = "none"; 
     resultScreen.style.display = "flex";
     finalScore.innerText = `${score}/20`;
 }
 
-// Restart the quiz
+
 restartButton.addEventListener("click", () => {
     resultScreen.style.display = "none"; 
     startScreen.style.display = "flex"; 
 });
 
-// Start game event
+
 startButton.addEventListener("click", fetchQuestions); 
