@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #171e32;
+    color: hsl(147, 87%, 61%);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Shared Container Style */
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid hsl(147, 87%, 61%);
+    border-radius: 15px;
+    height: 90%;
+    width: 60%;
+    background-color: #171e32;
+    padding: 20px;
+    max-width: 600px;
+    min-width: 320px;
+    box-shadow: 0 0 0 10px hsl(147, 87%, 61%);
+}
+
+/* Start Screen */
+.start-screen {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 50px;
+    color: hsl(147, 87%, 61%, 0.3);
+    -webkit-text-stroke: 2px  hsl(147, 87%, 61%) ;
+    margin-bottom: 20px;
+}
+.start-screen h2{
+    color: hsl(147, 87%, 61%, 0.3);
+    -webkit-text-stroke: 2px  hsl(147, 87%, 61%) ;
+}
+
+.dropdowns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+
+
+/* .dropdowns h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+} */
+
+select {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: hsl(147, 87%, 61%);
+    border: 2px solid hsl(147, 87%, 61%);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+select option {
+    background-color: #171e32;
+    color: white;
+}
+#start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid hsl(147, 87%, 61%);
+    color: hsl(147, 87%, 61%);
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#start-btn:hover {
+    background-color: hsl(147, 87%, 61%,0.3);
+    color: white;
+}
+
+/* Question Screen */
+.question-screen {
+    display: none;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#question {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0 10px;
+    text-align: center;
+    max-width: 90%;
+}
+
+#answer-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid hsl(147, 87%, 61%);
+    color: hsl(147, 87%, 61%);
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: hsl(147, 87%, 61%);
+    color: #171e32;
+}
+
+#next-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid hsl(147, 87%, 61%);
+    color: hsl(147, 87%, 61%);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#next-btn:hover {
+    background-color: hsl(147, 87%, 61%);
+    color: #171e32;
+}
+
+#timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* Result Screen */
+.result-screen {
+    display: none;
+}
+
+#final-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: hsl(147, 87%, 61%);
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid hsl(147, 87%, 61%);
+    color: hsl(147, 87%, 61%);
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#restart-btn:hover {
+    background-color: hsl(147, 87%, 61%);
+    color: #171e32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .screen {
+        width: 80%;
+        height: 85%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #next-btn, #timer, #restart-btn {
+        font-size: 14px;
+    }
+
+    select {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen {
+        width: 90%;
+        height: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #question {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #next-btn, #timer, #restart-btn {
+        font-size: 14px;
+    }
+
+    select {
+        width: 95%;
+        font-size: 14px;
+    }
+}

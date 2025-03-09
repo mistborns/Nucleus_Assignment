@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+
+<body>
+    <div class = "start-screen screen" id = "start-screen">
+        <h1>THE QUIZ GAME</h1>
+        <div class = "dropdowns">
+            <div class = "category">
+                <h2>CATEGORIES</h2>
+                
+                <select id="category" >
+                    <option value="9">General Knowledge</option>
+                    <option value="10">Books</option>
+                    <option value="11">Film</option>
+                    <option value="12">Music</option>
+                    <option value="15">Video Games</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Computers</option>
+                    <option value="20">Mythology</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                </select>
+                </div>
+                <div class = "difficulty">
+                    <h2>LEVELS</h2>
+                    <!-- <label for="difficulty">Select Difficulty:</label>  -->
+                    <select id = "difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <button id = "start-btn">Start</button>
+        </div>
+        
+    </div>
+
+    <div class="question-screen screen" id = "question-screen">
+        <h1>THE QUIZ GAME</h1>
+        <div class="quiz">
+            <h2><span id="question-number"></span> <span id="question"></span></h2>
+            <div id="answer-btn">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+        <div id="timer">Time: 15</div>
+    </div>
+
+    <div class="result-screen screen" id = "result-screen">
+        <h1>GAME OVER</h1>
+        <h2>Your score: <span id="final-score"></span></h2>
+        <button id="restart-btn">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
