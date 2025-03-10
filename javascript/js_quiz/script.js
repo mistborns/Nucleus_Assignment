@@ -69,9 +69,9 @@ function showQuestion() {
     startTimer(); 
 }
 
-// Reset UI for a new question
+
 function updateUI() {
-    clearTimeout(timer); 
+    clearInterval(timer); 
     timeLeft = 15; 
     timerDisplay.innerText = `Time: ${timeLeft}`; 
     nextButton.style.display = "none"; 
@@ -104,7 +104,7 @@ function selectAnswer(button, correctAnswer) {
     nextButton.style.display = "block";
 }
 
-// Reveal the correct answer if the user is wrong or time runs out
+
 function revealAnswer() {
     answerButtons.forEach(button => {
         if (button.innerText === questions[currentQuestionIndex].correctAnswer) {
